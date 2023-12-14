@@ -43,6 +43,14 @@
     <section class="course-details">
         <div class="container">
 
+            <div class="course-details__image">
+
+                <div style="width:100%; height:400px; background-size:cover; background-position:center; background-image: url('{{asset(\Illuminate\Support\Facades\Storage::url($course->getAttribute('large_image')))}}')">
+
+                </div>
+
+            </div>
+
             <div class="course-details__content">
                 <h3>{{$course->getAttribute('title')}}</h3>
                 <p>{{$course->getAttribute('short_description')}}</p>

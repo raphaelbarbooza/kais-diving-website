@@ -3,7 +3,7 @@
         <img src="{{asset('assets/images/shapes/swimmer-1-1.png')}}" class="video-two__swimmer" alt="">
         <div class="container">
             <div class="video-two__box wow fadeInRight" data-wow-duration="1500ms">
-                <img style="min-width: 500px; height: auto;" src="{{asset(\Illuminate\Support\Facades\Storage::url($random_featured_course->getAttribute('small_image')))}}" alt="">
+                <img style="max-width:600px; min-width: 500px; height: auto;" src="{{asset(\Illuminate\Support\Facades\Storage::url($random_featured_course->getAttribute('small_image')))}}" alt="">
                 <a href="{{route('website.curso',['course' => $random_featured_course->getAttribute('id')])}}" class="video-popup"><i class="fa fa-plus"></i></a>
             </div>
             <div class="row">
