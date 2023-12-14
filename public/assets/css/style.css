@@ -2024,8 +2024,7 @@ a:focus {
 
 
 .gallery-one {
-	padding-top: 120px;
-	padding-bottom: 90px;
+
 }
 
 .gallery-one__single {
@@ -4142,7 +4141,7 @@ a:focus {
 
 
 .course-details {
-	padding-top: 120px;
+	padding-top: 20px;
 	padding-bottom: 120px;
 }
 
@@ -5210,9 +5209,7 @@ a:focus {
 
 .testimonials-one__content {
 	position: relative;
-	padding-top: 50px;
-	padding-left: 60px;
-	padding-right: 60px;
+	padding: 10px;
 }
 
 .testimonials-one__qoute {
@@ -5229,26 +5226,6 @@ a:focus {
 
 .testimonials-one__single:hover .testimonials-one__qoute {
 	background-color: var(--thm-primary);
-}
-
-.testimonials-one__qoute::after,
-.testimonials-one__qoute::before {
-	content: '';
-	background-image: url(../images/shapes/qoute-1-1.png);
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-repeat: no-repeat;
-	background-position: center center;
-	-webkit-transition: all 500ms ease;
-	transition: all 500ms ease;
-}
-
-.testimonials-one__qoute::after {
-	opacity: 0;
-	background-image: url(../images/shapes/qoute-1-2.png);
 }
 
 .testimonials-one__single:hover .testimonials-one__qoute::after {

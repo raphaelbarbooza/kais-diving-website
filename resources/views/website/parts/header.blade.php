@@ -57,44 +57,24 @@
                 <ul class="main-nav__navigation-box">
                     <li class="dropdown">
                         <a href="{{route('website.home')}}">Home</a>
-                        <ul>
-                            <li><a href="index.html">Home 01</a></li>
-                            <li><a href="index-2.html">Home 02</a></li>
-                            <li><a href="index-rtl.html">Home RTL</a></li>
-                            <li class="dropdown">
-                                <a href="#">Header Styles</a>
-                                <ul>
-                                    <li><a href="index.html">Header 01</a></li>
-                                    <li><a href="index-2.html">Header 02</a></li>
-                                </ul>
-                            </li>
-                        </ul>
                     </li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Sobre</a></li>
                     <li class="dropdown">
-                        <a href="courses.html">Courses</a>
+                        <a href="#">Cursos</a>
                         <ul>
-                            <li><a href="courses.html">Courses</a></li>
-                            <li><a href="course-details.html">Course Details</a></li>
+                            @foreach(\App\Models\CourseCategory::orderBy('order')->get() as $category)
+
+                                <li><a href="#">{{$category->getAttribute('title')}}</a></li>
+
+                            @endforeach
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#">Pages</a>
-                        <ul>
-                            <li><a href="pricing.html">Pricing</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                        </ul>
+                        <a href="#">Pontos de Mergulho</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="news.html">Latest News</a>
-                        <ul>
-                            <li><a href="news.html">News Page</a></li>
-                            <li><a href="news-details.html">News Details</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul><!-- /.main-nav__navigation-box -->
-            </div><!-- /.main-nav__main-navigation -->
-        </div><!-- /.inner-container -->
-    </div><!-- /.container -->
-</nav><!-- /.main-nav-one -->
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -2,6 +2,7 @@
 
 namespace App\View\Components\Website;
 
+use App\Models\Locations;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -21,6 +22,7 @@ class HomeLocationsLine extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.website.home-locations-line');
+        $data['locations'] = Locations::orderBy('created_at','DESC')->limit(3)->get();
+        return view('components.website.home-locations-line', $data);
     }
 }

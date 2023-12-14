@@ -2,6 +2,7 @@
 
 namespace App\View\Components\Website;
 
+use App\Models\Testimonial;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -21,6 +22,7 @@ class HomeTestimonials extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.website.home-testimonials');
+        $data['testimonials'] = Testimonial::orderBy('order','ASC')->get();
+        return view('components.website.home-testimonials', $data);
     }
 }

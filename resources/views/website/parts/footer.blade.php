@@ -27,34 +27,39 @@
                     <div class="footer-widget__inner">
                         <h3 class="footer-widget__title">Company</h3>
                         <ul class="footer-widget__links-list list-unstyled">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Our History</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Sobre</a></li>
+                            <li><a href="#">Cursos</a></li>
+                            <li><a href="#">Contato</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="footer-widget footer-widget__links__widget-2">
                     <div class="footer-widget__inner">
-                        <h3 class="footer-widget__title">Explore</h3>
+                        <h3 class="footer-widget__title">Alguns Cursos</h3>
                         <ul class="footer-widget__links-list list-unstyled">
-                            <li><a href="#">Popular Courses</a></li>
-                            <li><a href="#">How It Works</a></li>
-                            <li><a href="#">Help Center</a></li>
+                            @foreach(\App\Models\Course::where('active','1')->inRandomOrder()->limit(3)->get() as $course)
+
+                                <li><a href="#">{{$course->getAttribute('title')}}</a></li>
+
+                            @endforeach
                         </ul>
                     </div>
                 </div>
                 <div class="footer-widget footer-widget__links__widget-3">
                     <div class="footer-widget__inner">
-                        <h3 class="footer-widget__title">Links</h3>
+                        <h3 class="footer-widget__title">Pontos de Mergulho</h3>
                         <ul class="footer-widget__links-list list-unstyled">
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
+                            @foreach(\App\Models\Locations::inRandomOrder()->limit(3)->get() as $location)
+
+                                <li><a href="#">{{$location->getAttribute('title')}}</a></li>
+
+                            @endforeach
                         </ul>
                     </div>
                 </div>
                 <div class="footer-widget footer-widget__social__widget">
                     <div class="footer-widget__inner">
-                        <h3 class="footer-widget__title">Follow</h3>
+                        <h3 class="footer-widget__title">Siga-nos</h3>
                         <div class="footer-widget__social">
                             @if(\App\Services\ShortOptionsServices::getOption('contact','social_facebook'))
                                 <a target="_blank"
