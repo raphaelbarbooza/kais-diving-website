@@ -19,11 +19,15 @@ use Filament\Tables\Columns\TextColumn;
 class ContactInfo extends Page implements HasForms
 {
     use InteractsWithForms;
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    protected static ?string $navigationIcon = 'fas-id-card';
 
     protected static ?string $navigationLabel = "Informações de Contato";
 
     protected static ?string $title = "Informações de Contato";
+
+    protected static ?string $navigationGroup = 'Informações';
+
+    protected static ?int $navigationSort = 1;
 
     protected static string $view = 'filament.pages.contact-info';
 

@@ -20,7 +20,13 @@ class TestimonialResource extends Resource
     protected static ?string $modelLabel = "Depoimento";
     protected static ?string $pluralModelLabel = "Depoimentos";
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'far-comment';
+
+    protected static ?string $navigationGroup = 'Publicar';
+
+    protected static ?int $navigationSort = 4;
+
+
 
     public static function form(Form $form): Form
     {

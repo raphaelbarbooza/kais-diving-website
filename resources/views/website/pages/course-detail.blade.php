@@ -1,5 +1,7 @@
 @extends('website.layout.website')
 
+@section('title','Detalhes de '.$course->category->getAttribute('title'))
+
 @section('content')
 
     <section class="page-header">

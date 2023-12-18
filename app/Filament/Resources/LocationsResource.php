@@ -20,7 +20,11 @@ class LocationsResource extends Resource
     protected static ?string $modelLabel = 'Local de Mergulho';
     protected static ?string $pluralModelLabel = 'Locais de Mergulho';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'fas-person-swimming';
+
+    protected static ?string $navigationGroup = 'Publicar';
+
+    protected static ?int $navigationSort= 3;
 
     public static function form(Form $form): Form
     {

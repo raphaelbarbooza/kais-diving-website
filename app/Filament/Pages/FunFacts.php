@@ -17,11 +17,14 @@ use Filament\Pages\Page;
 class FunFacts extends Page implements HasForms
 {
     use InteractsWithForms;
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    protected static ?string $navigationIcon = 'fas-arrow-up-9-1';
 
     protected static ?string $navigationLabel = "Contador Dados";
 
     protected static ?string $title = "Contador Dados";
+    protected static ?string $navigationGroup = 'Informações';
+
+    protected static ?int $navigationSort = 2;
 
     protected static string $view = 'filament.pages.fun-facts';
 
