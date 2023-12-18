@@ -108,8 +108,8 @@ class CoursesResource extends Resource
                                                             ->label('Imagem')
                                                             ->image()
                                                             ->imageEditor()
-                                                            ->imageResizeTargetWidth('800px')
-                                                            ->imageResizeTargetHeight('600px')
+                                                            ->imageResizeTargetWidth('800')
+                                                            ->imageResizeTargetHeight('600')
                                                             ->required()
                                                     ])
                                             ]),
@@ -152,8 +152,8 @@ class CoursesResource extends Resource
                                     ->required()
                                     ->image()
                                     ->imageEditor()
-                                    ->imageResizeTargetWidth('500px')
-                                    ->imageResizeTargetHeight('500px')
+                                    ->imageResizeTargetWidth('500')
+                                    ->imageResizeTargetHeight('500')
                                     ->helperText('Imagens proporcionais a 500 x 500 px')
                                     ->directory('courses'),
                                 Forms\Components\FileUpload::make('large_image')
@@ -161,8 +161,8 @@ class CoursesResource extends Resource
                                     ->required()
                                     ->image()
                                     ->imageEditor()
-                                    ->imageResizeTargetWidth('1170px')
-                                    ->imageResizeTargetHeight('550px')
+                                    ->imageResizeTargetWidth('1170')
+                                    ->imageResizeTargetHeight('550')
                                     ->helperText('Imagens proporcionais a 1170 x 550 px')
                                     ->directory('courses')
                             ]),
