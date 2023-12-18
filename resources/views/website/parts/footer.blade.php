@@ -1,14 +1,11 @@
 <footer class="site-footer-one">
 
     <div class="site-footer-one__bg" style="background-image: url('{{asset('assets/images/background/footer-bg-1-1.jpg')}}');"></div>
-    <!-- /.site-footer-one__bg -->
 
-    <!-- footer fishes -->
     <img src="{{asset('assets/images/shapes/fish-f-1.png')}}" alt="" class="site-footer__fish-1">
     <img src="{{asset('assets/images/shapes/fish-f-2.png')}}" alt="" class="site-footer__fish-2">
     <img src="{{asset('assets/images/shapes/fish-f-3.png')}}" alt="" class="site-footer__fish-3">
 
-    <!-- footer trees -->
     <img src="{{asset('assets/images/shapes/tree-f-1.png')}}" class="site-footer__tree-1" alt="">
     <img src="{{asset('assets/images/shapes/tree-f-2.png')}}" class="site-footer__tree-2" alt="">
 
@@ -17,7 +14,7 @@
             <div class="footer-widget-row">
                 <div class="footer-widget footer-widget__about">
                     <div class="footer-widget__inner">
-                        <a href="index.html">
+                        <a href="{{route('website.home')}}">
                             <img src="{{asset('assets/images/logo-2-1.png')}}" alt="" width="143">
                         </a>
                         <p>&copy; {{date('Y')}}, todos os direitos reservados.</p>
@@ -25,9 +22,9 @@
                 </div>
                 <div class="footer-widget footer-widget__links__widget-1">
                     <div class="footer-widget__inner">
-                        <h3 class="footer-widget__title">Company</h3>
+                        <h3 class="footer-widget__title">Empresa</h3>
                         <ul class="footer-widget__links-list list-unstyled">
-                            <li><a href="#">Sobre</a></li>
+                            <li><a href="{{route('website.about')}}">Sobre</a></li>
                             <li><a href="#">Cursos</a></li>
                             <li><a href="#">Contato</a></li>
                         </ul>
@@ -39,7 +36,7 @@
                         <ul class="footer-widget__links-list list-unstyled">
                             @foreach(\App\Models\Course::where('active','1')->inRandomOrder()->limit(3)->get() as $course)
 
-                                <li><a href="#">{{$course->getAttribute('title')}}</a></li>
+                                <li><a href="{{route('website.curso',['course' => $course->getAttribute('id')])}}">{{$course->getAttribute('title')}}</a></li>
 
                             @endforeach
                         </ul>
