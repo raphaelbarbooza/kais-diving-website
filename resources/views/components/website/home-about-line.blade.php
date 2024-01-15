@@ -6,7 +6,7 @@
                     <img src="{{asset('assets/images/resources/cta-2-1.jpg')}}" alt="">
                     <div class="cta-four__image-content">
                         <i class="scubo-icon-scuba-diving"></i>
-                        <p>17</p>
+                        <p>{{(date('Y')) - 2007}}</p>
                         <h3>anos de <br> experiencia</h3>
                     </div>
                 </div>

@@ -1746,12 +1746,18 @@ a:focus {
  # Slider
  --------------------------------------------------------------*/
 
+.owl-carousel .owl-stage{
+    display: flex !important;
+}
+
 [class*=slider-one__slide-] {
 	padding-top: 209px;
 	padding-bottom: 209px;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
+    width: 100%;
+    height: 100% !important;
 }
 
 .slider-one__content .anim-elm {
@@ -5156,7 +5162,10 @@ a:focus {
 }
 
 .testimonials-one__carousel .owl-item img {
-	width: auto;
+	max-width: 140px !important;
+    width: auto;
+    max-height: 140px;
+    border-radius: 50%;
 }
 
 .testimonials-one__single {

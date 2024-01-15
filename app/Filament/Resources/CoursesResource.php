@@ -23,7 +23,7 @@ class CoursesResource extends Resource
 
     protected static ?string $navigationIcon = 'fas-book-bookmark';
 
-    protected static ?string $navigationGroup = 'Publicar';
+    protected static ?string $navigationGroup = 'Publicações';
 
     protected static ?int $navigationSort = 2;
 
@@ -155,7 +155,11 @@ class CoursesResource extends Resource
                                     ->imageResizeTargetWidth('500')
                                     ->imageResizeTargetHeight('500')
                                     ->helperText('Imagens proporcionais a 500 x 500 px')
-                                    ->directory('courses'),
+                                    ->directory('courses')
+                                    ->imageResizeMode('cover')
+                                    ->imageCropAspectRatio('1:1')
+                                    ->imageResizeTargetWidth('500')
+                                    ->imageResizeTargetHeight('500'),
                                 Forms\Components\FileUpload::make('large_image')
                                     ->label('Imagem de Capa')
                                     ->required()
@@ -165,6 +169,10 @@ class CoursesResource extends Resource
                                     ->imageResizeTargetHeight('550')
                                     ->helperText('Imagens proporcionais a 1170 x 550 px')
                                     ->directory('courses')
+                                    ->imageResizeMode('cover')
+                                    ->imageCropAspectRatio('117:55')
+                                    ->imageResizeTargetWidth('1170')
+                                    ->imageResizeTargetHeight('550')
                             ]),
                         Forms\Components\Section::make('Detalhes')
                             ->columnSpan('full')

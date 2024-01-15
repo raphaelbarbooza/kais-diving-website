@@ -22,7 +22,7 @@ class TestimonialResource extends Resource
 
     protected static ?string $navigationIcon = 'far-comment';
 
-    protected static ?string $navigationGroup = 'Publicar';
+    protected static ?string $navigationGroup = 'Publicações';
 
     protected static ?int $navigationSort = 4;
 
@@ -52,6 +52,10 @@ class TestimonialResource extends Resource
                             ->imageCropAspectRatio('1:1')
                             ->imageResizeTargetHeight(200)
                             ->imageResizeTargetWidth(200)
+                            ->imageResizeMode('cover')
+                            ->imageCropAspectRatio('1:1')
+                            ->imageResizeTargetWidth('200')
+                            ->imageResizeTargetHeight('200')
                             ->label('Imagem do Cliente')
                             ->directory('testimonial')
                             ->columnSpan(3),

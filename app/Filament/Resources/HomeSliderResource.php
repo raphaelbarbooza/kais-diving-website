@@ -22,7 +22,7 @@ class HomeSliderResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $navigationGroup = 'Publicar';
+    protected static ?string $navigationGroup = 'Website';
 
     protected static ?int $navigationSort = 5;
 
@@ -47,6 +47,10 @@ class HomeSliderResource extends Resource
                                     ->helperText("Imagens proporcionais a 1800 X 770 px, Máximo 2 MB")
                                     ->columnSpan('full')
                                     ->directory('sliders')
+                                    ->imageResizeMode('cover')
+                                    ->imageCropAspectRatio('180:77')
+                                    ->imageResizeTargetWidth('1800')
+                                    ->imageResizeTargetHeight('770')
                             ]),
                         Forms\Components\Grid::make()
                             ->columnSpan(3)

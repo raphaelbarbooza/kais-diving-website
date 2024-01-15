@@ -22,7 +22,7 @@ class LocationsResource extends Resource
 
     protected static ?string $navigationIcon = 'fas-person-swimming';
 
-    protected static ?string $navigationGroup = 'Publicar';
+    protected static ?string $navigationGroup = 'Website';
 
     protected static ?int $navigationSort= 3;
 
@@ -135,6 +135,8 @@ class LocationsResource extends Resource
                                     ->imageResizeTargetWidth('500')
                                     ->imageResizeTargetHeight('500')
                                     ->helperText('Imagens proporcionais a 500 x 500 px')
+                                    ->imageResizeMode('cover')
+                                    ->imageCropAspectRatio('1:1')
                                     ->directory('courses'),
                                 Forms\Components\FileUpload::make('large_image')
                                     ->label('Imagem de Capa')
@@ -143,6 +145,8 @@ class LocationsResource extends Resource
                                     ->imageEditor()
                                     ->imageResizeTargetWidth('1170')
                                     ->imageResizeTargetHeight('550')
+                                    ->imageResizeMode('cover')
+                                    ->imageCropAspectRatio('117:55')
                                     ->helperText('Imagens proporcionais a 1170 x 550 px')
                                     ->directory('courses')
                             ])
