@@ -16,13 +16,12 @@
                     <div class="block-title text-left">
                         <img src="{{asset('assets/images/shapes/sec-line-1.png')}}" alt="">
                         <p class="text-uppercase">Sobre Kais Diving</p>
-                        <h3 class="text-uppercase">experiência,<br/> segurança e conhecimento.</h3>
+                        <h3 class="text-uppercase">
+                            {{$data['title']}}
+                        </h3>
                     </div><!-- /.block-title -->
-                    <p>Somos uma escola de mergulho e atividades aquáticas especializada em aulas exclusivas. Nosso
-                        atendimento é voltado para atender às suas necessidades como mergulhador credenciado ou
-                        iniciante de forma exclusiva oferecendo um atendimento direcionado para nossos clientes que
-                        realizarem a melhor pratica do mergulho autônomo ou atividade aquática com maior segurança.</p>
-                    <a href="#" class="thm-btn cta-four__btn">Saiba mais</a>
+                    {!! $data['content'] !!}
+                    <a href="{{route('website.about')}}" class="thm-btn cta-four__btn">Saiba mais</a>
                 </div>
             </div>
         </div>

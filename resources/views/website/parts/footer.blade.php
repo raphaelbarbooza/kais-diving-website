@@ -25,8 +25,8 @@
                         <h3 class="footer-widget__title">Empresa</h3>
                         <ul class="footer-widget__links-list list-unstyled">
                             <li><a href="{{route('website.about')}}">Sobre</a></li>
-                            <li><a href="#">Cursos</a></li>
-                            <li><a href="#">Contato</a></li>
+                            <li><a href="{{route('website.all-courses')}}">Cursos</a></li>
+                            <li><a href="{{route('website.contato')}}">Contato</a></li>
                         </ul>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                         <ul class="footer-widget__links-list list-unstyled">
                             @foreach(\App\Models\Locations::inRandomOrder()->limit(3)->get() as $location)
 
-                                <li><a href="#">{{$location->getAttribute('title')}}</a></li>
+                                <li><a href="{{route('website.local',['location' => $location->getAttribute('id')])}}">{{$location->getAttribute('title')}}</a></li>
 
                             @endforeach
                         </ul>

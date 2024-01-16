@@ -1,6 +1,6 @@
 @extends('website.layout.website')
 
-@section('title','Detalhes de '.$course->category->getAttribute('title'))
+@section('title','Detalhes de '.$course->getAttribute('title'))
 
 @section('content')
 

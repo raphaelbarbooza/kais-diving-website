@@ -35,4 +35,22 @@ class StringHelper
         return 'https://www.youtube.com/embed/' .  $youtube_id;
     }
 
+    public static function DECtoDMS($coord)
+    {
+
+        try {
+            $isnorth = $coord>=0;
+            $coord = abs($coord);
+            $deg = floor($coord);
+            $coord = ($coord-$deg)*60;
+            $min = floor($coord);
+            $sec = floor(($coord-$min)*60);
+            // or if you want the string representation
+            return sprintf("%d°%d'%d\"%s", $deg, $min, $sec, $isnorth ? 'N' : 'S');
+        }catch (\Throwable $th){
+            return "";
+        }
+    }
+
+
 }

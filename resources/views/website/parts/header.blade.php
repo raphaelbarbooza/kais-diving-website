@@ -60,19 +60,19 @@
                     </li>
                     <li><a href="{{route('website.about')}}">Sobre</a></li>
                     <li class="dropdown">
-                        <a href="#">Cursos</a>
+                        <a href="{{route('website.all-courses')}}">Cursos</a>
                         <ul>
                             @foreach(\App\Models\CourseCategory::orderBy('order')->get() as $category)
 
-                                <li><a href="#">{{$category->getAttribute('title')}}</a></li>
+                                <li><a href="{{route('website.all-courses',['categId' => $category->getAttribute('id')])}}">{{$category->getAttribute('title')}}</a></li>
 
                             @endforeach
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#">Pontos de Mergulho</a>
+                        <a href="{{route('website.locais')}}">Pontos de Mergulho</a>
                     </li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="{{route('website.contato')}}">Contato</a></li>
                 </ul>
             </div>
         </div>

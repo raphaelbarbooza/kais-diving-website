@@ -21,6 +21,7 @@ class HomeAboutLine extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.website.home-about-line');
+        $data['data'] = \App\Services\ShortOptionsServices::getOption('about','home');
+        return view('components.website.home-about-line', $data);
     }
 }
