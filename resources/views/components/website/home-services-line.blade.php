@@ -19,7 +19,7 @@
         <div class="row d-flex justify-content-center">
             @foreach($categories as $category)
                 <div class="col-xl-3 col-md-6 col-sm-12">
-                    <a href="#">
+                    <a href="{{route('website.all-courses',['categId' => $category['id']])}}">
                         <div class="service-one__single">
                             <i></i>
                             <h3>{{$category['title']}}</h3>

@@ -24,7 +24,7 @@ class HomeSliderResource extends Resource
 
     protected static ?string $navigationGroup = 'Website';
 
-    protected static ?int $navigationSort = 5;
+    protected static ?int $navigationSort = 1;
 
     public static function form(Form $form): Form
     {

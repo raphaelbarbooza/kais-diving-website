@@ -24,7 +24,7 @@
             </div>
             <p>Proporcionamos treinamentos desde o curso básico ao profissional,<br/> cursos de mergulho técnico, primeiros
                 socorros e diversas especializações.</p>
-            <a href="#" class="thm-btn cta-five__btn">Nossos Cursos</a>
+            <a href="{{route('website.all-courses')}}" class="thm-btn cta-five__btn">Nossos Cursos</a>
         </div>
     </div>
 </section>

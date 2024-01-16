@@ -31,7 +31,7 @@ class AboutInfo extends Page implements HasForms
 
     protected static ?string $navigationGroup = 'Website';
 
-    protected static ?int $navigationSort = 1;
+    protected static ?int $navigationSort = 2;
 
     protected static string $view = 'filament.pages.about-info';
 

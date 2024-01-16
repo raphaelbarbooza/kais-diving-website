@@ -21,7 +21,7 @@ class CourseCategoryResource extends Resource
     protected static ?string $modelLabel = "Categoria de Curso";
     protected static ?string $pluralModelLabel = "Categorias de Cursos";
 
-    protected static ?string $navigationGroup = "Publicar";
+    protected static ?string $navigationGroup = "Publicações";
     protected static ?int $navigationSort = 1;
     protected static ?string $navigationIcon = 'far-bookmark';
 

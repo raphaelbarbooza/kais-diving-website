@@ -25,9 +25,9 @@ class ContactInfo extends Page implements HasForms
 
     protected static ?string $title = "Informações de Contato";
 
-    protected static ?string $navigationGroup = 'Informações';
+    protected static ?string $navigationGroup = 'Website';
 
-    protected static ?int $navigationSort = 1;
+    protected static ?int $navigationSort = 3;
 
     protected static string $view = 'filament.pages.contact-info';
 

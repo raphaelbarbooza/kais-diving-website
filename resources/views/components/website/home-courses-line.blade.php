@@ -22,7 +22,7 @@
                     <div class="item">
                         <div class="course-one__single">
                             <div class="course-one__image">
-                                <a href="#" class="course-one__cat">
+                                <a href="{{route('website.all-courses',['categId' => $course->getAttribute('category_id')])}}" class="course-one__cat">
                                     {{$course->category->getAttribute('title')}}
                                 </a>
                                 <div class="course-one__image-inner">
@@ -34,7 +34,7 @@
                                 <h3><a href="{{route('website.curso',['course' => $course->getAttribute('id')])}}">{{$course->getAttribute('title')}}</a></h3>
                                 <p>{{$course->getAttribute('short_description')}}</p>
                             </div>
-                            <a href="#" class="course-one__book-link">Entre em Contato</a>
+                            <a href="{{route('website.contato',['assunto' => $course->getAttribute('title')])}}" class="course-one__book-link">Entre em Contato</a>
                         </div>
                     </div>
                 @endforeach

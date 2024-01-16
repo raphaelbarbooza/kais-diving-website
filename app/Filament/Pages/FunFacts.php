@@ -22,9 +22,9 @@ class FunFacts extends Page implements HasForms
     protected static ?string $navigationLabel = "Contador Dados";
 
     protected static ?string $title = "Contador Dados";
-    protected static ?string $navigationGroup = 'Informações';
+    protected static ?string $navigationGroup = 'Website';
 
-    protected static ?int $navigationSort = 2;
+    protected static ?int $navigationSort = 6;
 
     protected static string $view = 'filament.pages.fun-facts';
 

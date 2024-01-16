@@ -72,10 +72,10 @@
                                 <input type="text" placeholder="Telefone" name="phone">
                             </div>
                             <div class="col-md-12">
-                                <input type="text" placeholder="Subject" name="subject">
+                                <input type="text" placeholder="Assunto" name="subject" value="@if(request()->has('assunto')) Informações sobre {{request()->input('assunto')}} @endif">
                             </div>
                             <div class="col-md-12">
-                                <textarea name="message" placeholder="Messages"></textarea>
+                                <textarea name="message" placeholder="Mensagem"></textarea>
                             </div>
                             <div class="col-md-12">
                                 <button type="submit" class="thm-btn contact-one__btn">Enviar Mensagem</button>
